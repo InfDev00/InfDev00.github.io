@@ -4,30 +4,70 @@
   <meta charset="UTF-8">
   <title>reCAPTCHA Test</title>
   <script src="https://www.google.com/recaptcha/api.js"></script>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f6fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      text-align: center;
+      background: #fff;
+      padding: 40px 60px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    h3 {
+      margin-bottom: 20px;
+      color: #2f3640;
+    }
+    button {
+      background-color: #0984e3;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 28px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #74b9ff;
+    }
+    #result {
+      margin-top: 15px;
+      color: #2d3436;
+      font-weight: 500;
+    }
+  </style>
+
   <script>
     function onSubmit(token) {
-      // Unity WebView로 토큰 전달
       window.Unity?.call(JSON.stringify({ type: "recaptcha", token: token }));
       document.getElementById("result").innerText = "✅ Token received!";
     }
 
     function verifyUser() {
-      // reCAPTCHA 실행
       grecaptcha.execute();
-      return false; // 폼 제출 막기
+      return false;
     }
   </script>
 </head>
+
 <body>
-  <h3>Google reCAPTCHA Test Page</h3>
+  <div class="container">
+    <h3>Google reCAPTCHA Test Page</h3>
 
-  <!-- 폼 대신 버튼만 사용 -->
-  <button class="g-recaptcha"
-          data-sitekey="YOUR_SITE_KEY"
-          data-callback="onSubmit"
-          data-size="invisible"
-          onclick="verifyUser()">Verify</button>
+    <button class="g-recaptcha"
+            data-sitekey="6Lehr_ErAAAAAAlq9zudtCZq77HKxItcEMtXO5hK"
+            data-callback="onSubmit"
+            data-size="invisible"
+            onclick="verifyUser()">Verify</button>
 
-  <p id="result"></p>
+    <p id="result"></p>
+  </div>
 </body>
 </html>
