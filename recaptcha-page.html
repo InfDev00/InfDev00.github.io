@@ -1,74 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>reCAPTCHA Test</title>
-  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>reCAPTCHA v2 (Checkbox) for GitHub Pages</title>
+  <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f6fa;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .container {
-      text-align: center;
-      background: #fff;
-      padding: 40px 60px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-    h3 {
-      margin-bottom: 20px;
-      color: #2f3640;
-    }
-    button {
-      background-color: #0984e3;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 12px 28px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #74b9ff;
-    }
-    #result {
-      margin-top: 15px;
-      color: #2d3436;
-      font-weight: 500;
-    }
+    html,body{height:100%;margin:0;font-family:system-ui,Arial,sans-serif;background:#f5f6fa;display:flex;align-items:center;justify-content:center}
+    .card{background:#fff;padding:32px 40px;border-radius:16px;box-shadow:0 6px 24px rgba(0,0,0,.08);text-align:center}
+    h3{margin:0 0 16px;color:#2f3640}
+    #result{margin-top:12px;color:#2d3436;font-weight:600;min-height:1.2em}
+    #recaptcha{display:inline-block}
   </style>
-
-  <script>
-    function onSubmit(token) {
-      window.Unity?.call(JSON.stringify({ type: "recaptcha", token: token }));
-      document.getElementById("result").innerText = "✅ Token received!";
-    }
-
-    function verifyUser() {
-      grecaptcha.execute();
-      return false;
-    }
-  </script>
 </head>
-
 <body>
-  <div class="container">
-    <h3>Google reCAPTCHA Test Page</h3>
-
-    <button type="button"
-            class="g-recaptcha"
-            data-sitekey="6Lehr_ErAAAAAAlq9zudtCZq77HKxItcEMtXO5hK"
-            data-callback="onSubmit"
-            data-size="invisible"
-            onclick="verifyUser()">Verify</button>
-
+  <div class="card">
+    <h3>Google reCAPTCHA Test (v2 Checkbox)</h3>
+    <div id="recaptcha"></div>
     <p id="result"></p>
   </div>
+
+  <script>
+    // 1) 여기에 당신의 **실제 v2 체크박스 site key**를 넣으세요.
+    //   개발용 테스트키(도메인 무관): 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
+    const SITE_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+
+    let widgetId = null;
+
+    function onSubmit(token){
+      // Unity(Vuplex)로 토큰 전달
+      try { window.vuplex?.postMessage(JSON.stringify({ type: "recaptcha", token })); } catch(e){}
+      document.getElementById("result").textContent = "✅ Token received";
+      console.log("reCAPTCHA token", token);
+    }
+    function onError(){ console.error("recaptcha error-callback"); }
+    function onExpired(){ console.warn("recaptcha expired-callback"); }
+
+    function initRecaptcha(){
+      widgetId = grecaptcha.render("recaptcha", {
+        sitekey: SITE_KEY,
+        size: "normal",                // v2 체크박스
+        callback: onSubmit,
+        "error-callback": onError,
+        "expired-callback": onExpired
+      });
+    }
+
+    // api.js 로드 완료 전일 수 있으니 폴링로 초기화
+    document.addEventListener("DOMContentLoaded", () => {
+      console.log("ORIGIN", location.origin, "HOST", location.host, "HREF", location.href);
+      (function wait(){ 
+        if (window.grecaptcha && typeof grecaptcha.render === "function") initRecaptcha();
+        else setTimeout(wait, 80);
+      })();
+    });
+
+    // 디버깅에 도움
+    window.addEventListener("unhandledrejection", e => console.error("unhandledrejection:", e?.reason));
+  </script>
 </body>
 </html>
