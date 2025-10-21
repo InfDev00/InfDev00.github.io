@@ -6,20 +6,28 @@
   <script src="https://www.google.com/recaptcha/api.js"></script>
   <script>
     function onSubmit(token) {
+      // Unity WebView로 토큰 전달
       window.Unity?.call(JSON.stringify({ type: "recaptcha", token: token }));
-      document.getElementById("result").innerText = "Token received!";
+      document.getElementById("result").innerText = "✅ Token received!";
+    }
+
+    function verifyUser() {
+      // reCAPTCHA 실행
+      grecaptcha.execute();
+      return false; // 폼 제출 막기
     }
   </script>
 </head>
 <body>
   <h3>Google reCAPTCHA Test Page</h3>
-  <form action="?" method="POST">
-    <div class="g-recaptcha"
-         data-sitekey="6Lehr_ErAAAAAAlq9zudtCZq77HKxItcEMtXO5hK"
-         data-callback="onSubmit"
-         data-size="invisible"></div>
-    <button type="submit">Verify</button>
-  </form>
+
+  <!-- 폼 대신 버튼만 사용 -->
+  <button class="g-recaptcha"
+          data-sitekey="YOUR_SITE_KEY"
+          data-callback="onSubmit"
+          data-size="invisible"
+          onclick="verifyUser()">Verify</button>
+
   <p id="result"></p>
 </body>
 </html>
