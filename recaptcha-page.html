@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>reCAPTCHA Test</title>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    function onSubmit(token) {
+      window.Unity?.call(JSON.stringify({ type: "recaptcha", token: token }));
+      document.getElementById("result").innerText = "Token received!";
+    }
+  </script>
+</head>
+<body>
+  <h3>Google reCAPTCHA Test Page</h3>
+  <form action="?" method="POST">
+    <div class="g-recaptcha"
+         data-sitekey="6Lehr_ErAAAAAAlq9zudtCZq77HKxItcEMtXO5hK"
+         data-callback="onSubmit"
+         data-size="invisible"></div>
+    <button type="submit">Verify</button>
+  </form>
+  <p id="result"></p>
+</body>
+</html>
