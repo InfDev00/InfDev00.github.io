@@ -1,0 +1,65 @@
+name: Update manifest.json on push
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  update-manifest:
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update manifest.json
+        run: |
+          root_dir="contents"
+          preview_title="최근 포스트"
+          preview_desc="Unity 프로젝트와 기술 실험을 정리하고, 개발 프로세스를 기록합니다."
+          collections="[]"
+
+          for category in $(find "$root_dir" -mindepth 1 -maxdepth 1 -type d); do
+            category_name=$(basename "$category")
+            children="[]"
+
+            for subdir in $(find "$category" -mindepth 1 -maxdepth 1 -type d); do
+              sub_name=$(basename "$subdir")
+              files="[]"
+
+              for file in $(find "$subdir" -type f -name "*.html"); do
+                file_id=$(basename "$file" .html)
+                file_label=$(basename "$file" .html)
+                file_path="$file"
+                files=$(echo "$files" | jq --arg id "$file_id" --arg label "$file_label" --arg path "$file_path" \
+                  '. += [{"id":$id, "label":$label, "path":$path}]')
+              done
+
+              children=$(echo "$children" | jq --arg id "$sub_name" --arg label "$sub_name" --argjson files "$files" \
+                '. += [{"id":$id, "label":$label, "files":$files}]')
+            done
+
+            collections=$(echo "$collections" | jq --arg label "$category_name" --argjson children "$children" \
+              '. += [{"label":$label, "children":$children}]')
+          done
+
+          jq -n --arg previewTitle "$preview_title" \
+                --arg previewDescription "$preview_desc" \
+                --argjson collections "$collections" \
+                '{previewTitle:$previewTitle, previewDescription:$previewDescription, collections:$collections}' > manifest.json
+        
+      - name: Commit changes
+        run: |
+          if ! git diff --quiet -- manifest.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add manifest.json
+            git commit -m "chore: update manifest.json [skip ci]"
+            git push
+          else
+            echo "no changes to commit"
+          fi
