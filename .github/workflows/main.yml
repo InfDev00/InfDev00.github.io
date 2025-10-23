@@ -18,7 +18,7 @@ jobs:
 
       - name: Update manifest.json
         run: |
-          root_dir="contents"
+          root_dir="content"
           preview_title="최근 포스트"
           preview_desc="Unity 프로젝트와 기술 실험을 정리하고, 개발 프로세스를 기록합니다."
           collections="[]"
