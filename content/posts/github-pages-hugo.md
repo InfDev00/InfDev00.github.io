@@ -4,8 +4,6 @@ draft: false
 title: 'Hugo로 GitHub Pages 블로그 만들기'
 ---
 
-# Hugo로 GitHub Pages 블로그 만들기
-
 > 간편하게 시작하는 나만의 블로그.
 
 ---
