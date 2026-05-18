@@ -1,0 +1,12 @@
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-title">Sections</h3>
+        <ul class="widget-list">
+            {{ range .Site.Sections }}
+            <li>
+                <a href="{{ .Permalink }}">{{ .Title }} <span>({{ len .Pages }})</span></a>
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+</aside>

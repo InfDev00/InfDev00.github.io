@@ -1,0 +1,56 @@
+@media screen and (min-width: 768px) {
+    .container-with-sidebar {
+        display: flex;
+        max-width: calc(var(--main-width) + var(--gap) * 2 + 250px);
+        margin: 0 auto;
+        padding: 0 var(--gap);
+    }
+
+    .sidebar {
+        width: 250px;
+        flex-shrink: 0;
+        padding-top: var(--main-top-gap);
+        margin-right: var(--gap);
+    }
+
+    .main {
+        flex-grow: 1;
+        max-width: var(--main-width);
+    }
+}
+
+/* 모바일 화면에서는 사이드바가 위로 가도록 처리 */
+@media screen and (max-width: 767px) {
+    .sidebar {
+        padding: var(--gap);
+        border-bottom: 1px solid var(--border);
+    }
+}
+
+/* 사이드바 디자인 리터칭 */
+.widget-title {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.widget-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget-list li {
+    margin-bottom: 10px;
+}
+
+.widget-list a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.widget-list a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
