@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on InfDev DevBlog</title><link>https://infdev00.github.io/posts/</link><description>Recent content in Posts on InfDev DevBlog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Mon, 18 May 2026 00:42:48 +0900</lastBuildDate><atom:link href="https://infdev00.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo로 GitHub Pages 블로그 만들기</title><link>https://infdev00.github.io/posts/github-pages-hugo/</link><pubDate>Mon, 18 May 2026 00:42:48 +0900</pubDate><guid>https://infdev00.github.io/posts/github-pages-hugo/</guid><description>&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on InfDev DevBlog</title><link>https://infdev00.github.io/posts/</link><description>Recent content in Posts on InfDev DevBlog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Mon, 18 May 2026 00:42:48 +0900</lastBuildDate><atom:link href="https://infdev00.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo로 GitHub Pages 블로그 만들기 (1)</title><link>https://infdev00.github.io/posts/github-pages-hugo0/</link><pubDate>Mon, 18 May 2026 00:42:48 +0900</pubDate><guid>https://infdev00.github.io/posts/github-pages-hugo0/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;간편하게 시작하는 나만의 블로그.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
@@ -37,4 +37,18 @@
 &lt;/table&gt;
 &lt;p&gt;HTML이나 Jekyll도 고려했지만 Hugo를 선택한 이유는 단순하다.
 MarkDown을 통해 HTML보다 편리하게 글을 작성할 수 있고, 단순히 Hugo 하나만 설치해도 진행할 수 있었다.
-특히 블로그 글이 많아지더라도 압도적인 빌드 속도를 유지할 수 있다는 점에서 선택했다.&lt;/p&gt;</description></item></channel></rss>
+특히 블로그 글이 많아지더라도 압도적인 빌드 속도를 유지할 수 있다는 점에서 선택했다.&lt;/p&gt;</description></item><item><title/><link>https://infdev00.github.io/posts/github-pages-hugo1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://infdev00.github.io/posts/github-pages-hugo1/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;간단하게 시작하는 블로그 디자인&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="다양한-테마를-적용하는-방법"&gt;다양한 테마를 적용하는 방법&lt;/h2&gt;
+&lt;p&gt;Hugo는 이전 편에서 PapaMod를 사용했던 것처럼 다양한 테마를 제공한다. 이러한 테마들은 &lt;a href="https://themes.gohugo.io/"&gt;Hugo Themes&lt;/a&gt; 사이트에서 간편하게 확인하고 적용할 수 있다.&lt;/p&gt;
+&lt;p&gt;테마를 적용하는 건 submodule을 사용해서 간단하게 진행할 수 있다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 기존 테마 제거&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git submodule deinit -f &lt;span style="color:#e6db74"&gt;&amp;#34;themes/&amp;lt;기존 테마 명&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git rm -f &lt;span style="color:#e6db74"&gt;&amp;#34;themes/&amp;lt;기존 테마 명&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rm -rf &lt;span style="color:#e6db74"&gt;&amp;#34;.git/modules/themes/&amp;lt;기존 테마 명&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 새 테마 추가&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git submodule add &lt;span style="color:#e6db74"&gt;&amp;#34;&amp;lt;git 저장소 URL&amp;gt;&amp;#34;&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;themes/&amp;lt;새 테마 명&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이후 &lt;code&gt;hugo.yaml&lt;/code&gt;에서 theme 부분을 수정해야 한다. 참고로 이 시점에서 편의성의 이유로 &lt;code&gt;hugo.toml&lt;/code&gt;도 &lt;code&gt;hugo.yaml&lt;/code&gt;로 변경했다.&lt;/p&gt;</description></item></channel></rss>
