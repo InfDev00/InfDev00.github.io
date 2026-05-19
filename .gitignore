@@ -1,3 +1,9 @@
+# Mac의 메타데이터 파일
 .DS_Store
+
+# Hugo 서버 잠금 파일
 .hugo_build_lock
+
+# Hugo 빌드 결과물 및 임시 폴더
 public/
+resources/

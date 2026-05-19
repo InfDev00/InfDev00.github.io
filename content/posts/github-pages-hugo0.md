@@ -1,7 +1,7 @@
 ---
 date: '2026-05-18T00:42:48+09:00'
 draft: false
-title: 'Hugo로 GitHub Pages 블로그 만들기'
+title: 'Hugo로 GitHub Pages 블로그 만들기 (1)'
 ---
 
 > 간편하게 시작하는 나만의 블로그.
