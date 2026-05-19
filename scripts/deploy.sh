@@ -1,26 +1,6 @@
 #!/bin/bash
 
-echo -e "\33[0;32mDeploying updates to Github...\033[0m"
-
-draft_files=$(grep -rl "draft: true" content/posts/)
-
-if [ -n "$draft_files" ]; then
-    echo -e "\033[0;33m⚠️  draft: true 파일 발견:\033[0m"
-    echo "$draft_files"
-    echo ""
-    read -p "전부 draft: false로 변경할까요? (y/n): " fix
-
-    if [ "$fix" = "y" ] || [ "$fix" = "Y" ]; then
-        echo "$draft_files" | while read -r file; do
-            sed -i '' 's/draft: true/draft: false/' "$file"
-            echo "✅ 수정됨: $file"
-        done
-    else
-        echo -e "\033[0;31m🚫 draft: true 파일이 남아있어 배포를 중단합니다.\033[0m"
-        exit 1
-    fi
-fi
-    
+echo -e "\033[0;32mDeploying updates to Github...\033[0m"
 
 #서브 모듈(테마) 업데이트
 git submodule update --remote
