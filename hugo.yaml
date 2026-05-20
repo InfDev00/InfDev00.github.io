@@ -1,6 +1,6 @@
 baseURL: "https://infdev00.github.io/"
 languageCode: "ko-kr"
-title: "InfDev DevBlog"
+title: "InfDev00 DevBlog"
 theme: PaperMod
 
 # 1. 메뉴 설정 (Home, About, GitHub)
@@ -16,21 +16,19 @@ menu:
       url: "https://github.com/InfDev00"
       weight: 30
 
-# 2. PaperMod 테마 상세 설정 (제목만 나오는 현상 해결 및 기능 활성화)
+# 2. PaperMod 테마 상세 설정
 params:
   env: production
-  # 본문 요약(Summary)을 메인 화면에 표시
   ShowReadingTime: true
   ShowShareButtons: false
   ShowPostNavLinks: true
   ShowCodeCopyButtons: true
   
-  # [중요] 메인화면에 보여줄 실제 폴더(섹션) 리스트를 지정합니다.
-  # content/ 밑에 만든 폴더명들을 여기에 빼놓지 말고 적어주세요.
   mainSections:
     - posts
 
-  # 메인 화면 상단 프로필 레이아웃을 쓰고 싶다면 활성화 (선택 사항)
-  # homeInfoParams:
-  #   Title: "안녕하세요, InfDev입니다 👋"
-  #   Content: "개발 및 일상 블로그입니다."
+# 3. HTML 태그 허용 설정 (About 페이지의 카드/스택 정상 노출용) 👈 이 부분이 추가되었습니다!
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

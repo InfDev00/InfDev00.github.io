@@ -2,7 +2,8 @@
 title: "About"
 date: 2026-05-20
 description: "Unity 기술 블로그입니다."
-layout: "about"
+type: "page"
+layout: "single"
 ---
 
 # 🕹️ InfDev00
