@@ -1,0 +1,26 @@
+{{ $level := .Get 0 | default 0 | int }}
+
+<div class="indicator-box">
+  {{ range seq 5 }}
+  <span class="indicator-dot{{ if le . $level }} active{{ end }}"></span>
+  {{ end }}
+</div>
+
+<style>
+  .indicator-box {
+    display: flex;
+    gap: 3px;
+    margin-top: 5px;
+  }
+
+  .indicator-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    background-color: #e1e4e8;
+  }
+
+  .indicator-dot.active {
+    background-color: var(--primary);
+  }
+</style>
