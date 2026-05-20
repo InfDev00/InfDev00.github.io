@@ -1,5 +1,5 @@
 baseURL: "https://infdev00.github.io/"
-languageCode: "ko-kr"
+locale: "ko-kr"
 title: "InfDev00 DevBlog"
 theme: PaperMod
 

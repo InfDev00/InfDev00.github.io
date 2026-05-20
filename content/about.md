@@ -7,40 +7,34 @@ layout: "single"
 ---
 
 <div style="text-align: center; margin-bottom: 40px;">
-  <!-- 프로필 사진: static/profile.jpg 파일이 있다고 가정하거나 아래 URL을 수정하세요 -->
   <img src="https://github.com/InfDev00.png" alt="InfDev00 Profile" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid var(--primary); padding: 5px; margin-bottom: 15px;">
   <p style="font-size: 1.1rem; color: var(--secondary);">지속 가능한 코드를 고민하는 Unity 개발자입니다.</p>
 </div>
 
 <section style="margin-bottom: 40px;">
   <h2 style="border-bottom: 2px solid var(--primary); padding-bottom: 8px; margin-bottom: 20px;">🛠 Tech Stacks</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 15px;">
-    
-    <!-- Unity -->
-    <div style="text-align: center; padding: 10px; border: 1px solid var(--border); border-radius: 12px; transition: transform 0.2s ease-in-out;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-      <img src="https://simpleicons.org/icons/unity.svg" width="30" height="30" alt="Unity" style="filter: var(--img-invert); margin-bottom: 5px;">
-      <div style="font-weight: 600; font-size: 0.9rem;">Unity</div>
-    </div>
-
-    <!-- C# -->
-    <div style="text-align: center; padding: 10px; border: 1px solid var(--border); border-radius: 12px; transition: transform 0.2s ease-in-out;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-      <img src="https://simpleicons.org/icons/csharp.svg" width="30" height="30" alt="C#" style="margin-bottom: 5px;">
-      <div style="font-weight: 600; font-size: 0.9rem;">C#</div>
-    </div>
-
-    <!-- Git -->
-    <div style="text-align: center; padding: 10px; border: 1px solid var(--border); border-radius: 12px; transition: transform 0.2s ease-in-out;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-      <img src="https://simpleicons.org/icons/git.svg" width="30" height="30" alt="Git" style="margin-bottom: 5px;">
-      <div style="font-weight: 600; font-size: 0.9rem;">Git</div>
-    </div>
-
-    <!-- Github Actions -->
-    <div style="text-align: center; padding: 10px; border: 1px solid var(--border); border-radius: 12px; transition: transform 0.2s ease-in-out;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-      <img src="https://simpleicons.org/icons/githubactions.svg" width="30" height="30" alt="GitHub Actions" style="margin-bottom: 5px;">
-      <div style="font-weight: 600; font-size: 0.9rem;">Actions</div>
-    </div>
-
+  
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin-top: 20px; margin-bottom: 30px;">
+  
+  <!-- Unity -->
+  <div style="border: 1px solid #e1e4e8; border-radius: 8px; padding: 12px; text-align: center; background-color: var(--card-background, #f6f8fa);">
+    <img src="https://simpleicons.org/icons/unity.svg" width="35" height="35" alt="Unity" style="margin-bottom: 6px;"/>
+    <div style="font-weight: bold; font-size: 14px;">Unity</div>
   </div>
+
+  <!-- C# -->
+  <div style="border: 1px solid #e1e4e8; border-radius: 8px; padding: 12px; text-align: center; background-color: var(--card-background, #f6f8fa);">
+    <img src="https://simpleicons.org/icons/csharp.svg" width="35" height="35" alt="C#" style="margin-bottom: 6px;"/>
+    <div style="font-weight: bold; font-size: 14px;">C#</div>
+  </div>
+
+  <!-- Git -->
+  <div style="border: 1px solid #e1e4e8; border-radius: 8px; padding: 12px; text-align: center; background-color: var(--card-background, #f6f8fa);">
+    <img src="https://simpleicons.org/icons/git.svg" width="35" height="35" alt="Git" style="margin-bottom: 6px;"/>
+    <div style="font-weight: bold; font-size: 14px;">Git</div>
+  </div>
+
+</div>
 </section>
 
 <section>
