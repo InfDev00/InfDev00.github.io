@@ -7,3 +7,6 @@
 # Hugo 빌드 결과물 및 임시 폴더
 public/
 resources/
+
+# AI 관련 파일
+GEMINI.md
