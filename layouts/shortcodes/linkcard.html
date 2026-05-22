@@ -1,0 +1,19 @@
+<div class="link-card-wrapper">
+  <a href="{{ .Get "url" }}" target="_blank" rel="noopener noreferrer" class="link-card-link">
+    <div class="link-card">
+      {{ if .Get "image" }}
+      <div class="link-card-image">
+        <img src="{{ .Get "image" }}" alt="{{ .Get "title" }}">
+      </div>
+      {{ end }}
+      <div class="link-card-content">
+        <div class="link-card-title">{{ .Get "title" | default (.Get "url") }}</div>
+        <div class="link-card-description">{{ .Get "description" }}</div>
+        <div class="link-card-meta">
+          {{ with .Get "site" }}<span class="link-card-site">{{ . }}</span>{{ end }}
+          <span class="link-card-url">{{ .Get "url" }}</span>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
