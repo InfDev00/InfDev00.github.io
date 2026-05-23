@@ -4,6 +4,10 @@ draft: false
 title: 'Asset Postprocessor로 에셋 최적화'
 ---
 
+> asset 자동화를 위한 기본적인 규칙
+
+---
+
 우선 Asset Postprocessor를 사용하는 이유를 알고 싶다면 아래 블로그 글이 도움이 될 것이다. Asset Postprocessor에 대한 내용은 별로 없지만 왜 Asset Postprocessor를 사용하는지, 생산 파이프라인을 구성해야 하는지에 대해 알 수 있다.
 
 {{< linkcard 
