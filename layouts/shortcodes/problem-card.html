@@ -1,0 +1,9 @@
+{{- $type := .Get "type" | default "bad" -}}
+{{- $tag := .Get "tag" -}}
+{{- $title := .Get "title" -}}
+
+<div class="problem-card {{ $type }}">
+    {{ if $tag }}<div class="card-tag">{{ $tag }}</div>{{ end }}
+    {{ if $title }}<h4>{{ $title }}</h4>{{ end }}
+    <p>{{ .Inner | markdownify }}</p>
+</div>
