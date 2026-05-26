@@ -6,7 +6,6 @@ title: 'GameObject를 ECS로 — Baking 완전 정복'
 
 > GameObject와 Entity가 공존하는 방법.
 
----
 
 ## GameObject 혼용 이유
 
