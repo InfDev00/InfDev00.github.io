@@ -15,10 +15,10 @@
 &lt;p&gt;서로소 집합과 이를 구현하는 Union-Find 알고리즘에 대한 학습&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id="1-서로소-집합disjoint-sets의-개념"&gt;1. 서로소 집합(Disjoint Sets)의 개념&lt;/h2&gt;
+&lt;h2 id="서로소-집합disjoint-sets의-개념"&gt;서로소 집합(Disjoint Sets)의 개념&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;서로소 집합&lt;/strong&gt;은 임의의 두 집합 사이에 공통된 원소가 존재하지 않는 집합 관계를 의미한다. 즉, 모든 부분 집합들이 서로 중복되지 않는 상태를 유지한다.&lt;/p&gt;
 &lt;p&gt;이러한 집합들의 상태를 관리하고, 특정 원소가 어떤 집합에 속해 있는지 판별하거나 두 개의 집합을 하나로 합치는 연산을 수행하기 위한 자료구조를 &lt;strong&gt;서로소 집합 자료구조&lt;/strong&gt; 또는 &lt;strong&gt;Union-Find 자료구조&lt;/strong&gt;라고 한다.&lt;/p&gt;
 &lt;p&gt;주로 그래프에서 사이클인지 판별할 때 사용한다.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id="2-union-find의-핵심-연산"&gt;2. Union-Find의 핵심 연산&lt;/h2&gt;
+&lt;h2 id="union-find의-핵심-연산"&gt;Union-Find의 핵심 연산&lt;/h2&gt;
 &lt;p&gt;Union-Find 자료구조는 크게 두 가지 연산을 통해 데이터를 관리한다.&lt;/p&gt;</description></item></channel></rss>
