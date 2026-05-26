@@ -9,4 +9,5 @@ public/
 resources/
 
 # AI 관련 파일
-GEMINI.md
+CLAUDE.md
+.claude/

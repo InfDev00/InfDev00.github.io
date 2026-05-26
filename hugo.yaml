@@ -27,6 +27,7 @@ params:
   mainSections:
     - posts
     - algorithms
+    - unity
 
 # 3. HTML 태그 허용 설정 (About 페이지의 카드/스택 정상 노출용)
 markup:
