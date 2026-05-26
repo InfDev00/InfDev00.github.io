@@ -104,8 +104,6 @@ public struct SpawnerData : IComponentData
 }
 ```
 
----
-
 ### Component 데이터 수정
 
 존재하는 Entity의 Component 값을 MonoBehaviour에서 직접 읽거나 쓸 수 있다.
