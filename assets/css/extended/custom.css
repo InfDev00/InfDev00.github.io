@@ -244,3 +244,51 @@
         gap: var(--gap, 1rem);
     }
 }
+
+/* ── flowchart shortcode ── */
+.flowchart {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 1.5rem 0;
+}
+
+.flow-box {
+    background: var(--code-bg);
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    padding: 0.45rem 1rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.flow-arrow {
+    padding: 0 0.5rem;
+    color: var(--secondary);
+    font-size: 1.2rem;
+}
+
+.flow-box.flow-color-0 {
+    background: #e3f2fd;
+    border-color: #90caf9;
+    color: #1565c0;
+}
+
+.flow-box.flow-color-1 {
+    background: #e8f5e9;
+    border-color: #66bb6a;
+    color: #2e7d32;
+}
+
+.flow-box.flow-color-2 {
+    background: #fff8e1;
+    border-color: #ffca28;
+    color: #f57f17;
+}
+
+.flow-box.flow-color-3 {
+    background: #fce4ec;
+    border-color: #ef9a9a;
+    color: #b71c1c;
+}

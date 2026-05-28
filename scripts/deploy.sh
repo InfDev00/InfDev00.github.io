@@ -11,6 +11,9 @@ if [ $# -eq 1 ]; then
     msg="$1"
 fi
 
+# /new-post가 저장한 AI 초안 원본 사본 삭제
+find content -name "*.orig.md" -delete
+
 # main에 push 및 Action이 자동 빌드 & gh-paghes 배포
 git add .
 git commit -m "$msg"

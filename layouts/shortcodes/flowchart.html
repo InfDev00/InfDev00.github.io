@@ -1,0 +1,8 @@
+{{- $steps := split (.Inner | strings.TrimSpace) "|" -}}
+<div class="flowchart">
+  {{- range $i, $step := $steps -}}
+    {{- $step = strings.TrimSpace $step -}}
+    {{- if $i }}<div class="flow-arrow">→</div>{{ end -}}
+    <div class="flow-box flow-color-{{ mod $i 4 }}">{{ $step }}</div>
+  {{- end -}}
+</div>
