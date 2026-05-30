@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Servers on InfDev00 DevBlog</title><link>https://infdev00.github.io/server/</link><description>Recent content in Servers on InfDev00 DevBlog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Sat, 30 May 2026 16:00:42 +0900</lastBuildDate><atom:link href="https://infdev00.github.io/server/index.xml" rel="self" type="application/rss+xml"/><item><title>C# 서버 입문하기 — ASP.NET Core</title><link>https://infdev00.github.io/server/csharp-server-intro/</link><pubDate>Sat, 30 May 2026 16:00:42 +0900</pubDate><guid>https://infdev00.github.io/server/csharp-server-intro/</guid><description>&lt;blockquote&gt;
-&lt;p&gt;C#은 알았는데, 서버는 몰랐다&lt;/p&gt;
+&lt;p&gt;유니티 개발자의 C# 서버 배우기&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;p&gt;Unity를 다루면서 서버에 대해 관심이 생겨 공부를 시작했다. 빠르게 입문하기 위해 우선 익숙한 C#을 사용하는 &lt;strong&gt;ASP.NET Core Minimal API&lt;/strong&gt;를 선택했고, 아래 가이드를 통해 학습했다.&lt;/p&gt;
