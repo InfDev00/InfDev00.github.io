@@ -4,7 +4,7 @@ draft: false
 title: 'C# 서버 입문하기 — ASP.NET Core'
 ---
 
-> C#은 알았는데, 서버는 몰랐다
+> 유니티 개발자의 C# 서버 배우기
 
 ---
 
