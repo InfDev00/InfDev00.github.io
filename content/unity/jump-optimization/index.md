@@ -1,6 +1,6 @@
 ---
 date: '2026-05-31T23:39:04+09:00'
-draft: true
+draft: false
 title: '점프 최적화 — Coyote Time과 Jump Buffer'
 ---
 
