@@ -39,7 +39,8 @@ Controller 방식은 라우트 처리 로직을 별도 Controller 클래스 파�
 {{< /problem-card >}}
 </div>
 
-기능 자체가 달라지는 건 아니다. 다만 규모가 커질수록 Controller 방식이 유지보수에 유리하다.
+기능 자체가 달라지는 건 아니다. 다만 규모가 커질수록 Controller 방식이 유지보수에 유리하다. Minimal API처럼 `Program.cs`에 라우팅을 포함시키는 방식은 엔드포인트가 늘어날수록 한 파일이 비대해져 전체 구조를 파악하기 어려워진다.  
+이에 비해 Controller는 리소스 단위로 파일을 분리할 수 있어 관리가 수월해진다.
 
 ---
 
@@ -68,7 +69,7 @@ public class TodoItemsController : ControllerBase
 }
 ```
 
-Minimal API에서는 Inline Rambda를 통해 DI를 받았다. Controller에서는 생성자 주입으로 바뀌어서 `Program.cs`에 등록된 `TodoContext`를 프레임워크가 생성자로 넣어준다.
+Minimal API에서는 Inline Rambda를 통해 DI를 받았다. Controller에서는 생성자 주입으로 바뀌어서 `Program.cs`에 등록된 `TodoContext`를 생성자로 넣어준다.
 
 ---
 
