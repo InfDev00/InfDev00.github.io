@@ -258,6 +258,7 @@
 .flowchart {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 0;
     margin: 1.5rem 0;
