@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="268" viewBox="0 0 240 268">
+  <rect width="240" height="268" fill="#f8fafc" rx="8"/>
+
+  <!-- 시작(S) / 도착(E) 셀 -->
+  <rect x="20"  y="180" width="40" height="40" fill="#bbf7d0"/>
+  <rect x="180" y="20"  width="40" height="40" fill="#fecaca"/>
+
+  <!-- 격자선 -->
+  <g stroke="#cbd5e1" stroke-width="1">
+    <line x1="20"  y1="20" x2="20"  y2="220"/>
+    <line x1="60"  y1="20" x2="60"  y2="220"/>
+    <line x1="100" y1="20" x2="100" y2="220"/>
+    <line x1="140" y1="20" x2="140" y2="220"/>
+    <line x1="180" y1="20" x2="180" y2="220"/>
+    <line x1="220" y1="20" x2="220" y2="220"/>
+    <line x1="20" y1="20"  x2="220" y2="20"/>
+    <line x1="20" y1="60"  x2="220" y2="60"/>
+    <line x1="20" y1="100" x2="220" y2="100"/>
+    <line x1="20" y1="140" x2="220" y2="140"/>
+    <line x1="20" y1="180" x2="220" y2="180"/>
+    <line x1="20" y1="220" x2="220" y2="220"/>
+  </g>
+
+  <!-- 직각삼각형 점선 (가로/세로 다리) -->
+  <line x1="40" y1="200" x2="200" y2="200" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="200" y1="40" x2="200" y2="200" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <!-- 직각 표시 -->
+  <polyline points="192,200 192,192 200,192" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+
+  <!-- 빗변 (유클리드 거리) -->
+  <line x1="40" y1="200" x2="200" y2="40" stroke="#3b82f6" stroke-width="2.5"/>
+
+  <!-- S / E 라벨 -->
+  <text x="40"  y="200" text-anchor="middle" dominant-baseline="central"
+    font-family="system-ui,sans-serif" font-size="13" font-weight="bold" fill="#166534">S</text>
+  <text x="200" y="40"  text-anchor="middle" dominant-baseline="central"
+    font-family="system-ui,sans-serif" font-size="13" font-weight="bold" fill="#991b1b">E</text>
+
+  <!-- 캡션 -->
+  <text x="120" y="242" text-anchor="middle"
+    font-family="system-ui,sans-serif" font-size="13" fill="#334155">h = &#x221A;(4&#178; + 4&#178;) &#x2248; <tspan font-weight="bold" fill="#1d4ed8">5.66</tspan></text>
+  <text x="120" y="258" text-anchor="middle"
+    font-family="system-ui,sans-serif" font-size="11" fill="#64748b">대각선 이동 허용, 직선 거리</text>
+</svg>
