@@ -2,6 +2,7 @@
 date: '2026-05-19T00:42:48+09:00'
 draft: false
 title: 'Hugo로 GitHub Pages 블로그 만들기 (2)'
+tags: ['hugo', 'github-pages', 'theme']
 ---
 
 > 간단하게 시작하는 블로그 디자인

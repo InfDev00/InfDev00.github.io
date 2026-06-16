@@ -2,6 +2,7 @@
 date: '2026-06-06T21:46:47+09:00'
 draft: false
 title: 'C++로 TCP 서버 학습'
+tags: ['cpp', 'tcp', 'network']
 ---
 
 > TCP 서버 구조 학습하기

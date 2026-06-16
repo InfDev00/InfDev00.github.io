@@ -2,6 +2,7 @@
 date: '2026-05-30T16:00:42+09:00'
 draft: false
 title: 'C# 서버 입문하기 — ASP.NET Core'
+tags: ['csharp', 'aspnet', 'minimal-api']
 ---
 
 > 유니티 개발자의 C# 서버 배우기

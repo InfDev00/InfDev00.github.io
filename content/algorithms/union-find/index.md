@@ -2,6 +2,7 @@
 date: '2026-05-21T01:57:18+09:00'
 draft: false
 title: '서로소 집합(Disjoint Sets)과 Union-Find 알고리즘의 이해'
+tags: ['graph', 'data-structure', 'union-find']
 ---
 
 > 서로소 집합과 이를 구현하는 Union-Find 알고리즘에 대한 학습

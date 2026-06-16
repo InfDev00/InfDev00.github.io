@@ -2,6 +2,7 @@
 date: '2026-05-24T23:57:37+09:00'
 draft: false
 title: 'ECS 개념 알아보기'
+tags: ['ecs', 'dots', 'architecture']
 ---
 
 > 데이터 중심으로 게임을 다시 분석하기

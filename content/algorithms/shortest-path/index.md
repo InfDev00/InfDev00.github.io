@@ -2,6 +2,7 @@
 date: '2026-06-04T22:01:15+09:00'
 draft: false
 title: '최단 경로 알고리즘: 다익스트라와 벨만-포드'
+tags: ['graph', 'dijkstra', 'bellman-ford']
 ---
 
 > 가중 그래프에서 가장 적은 비용으로 도달하는 길을 찾기.

@@ -2,6 +2,7 @@
 date: '2026-05-26T22:49:33+09:00'
 draft: false
 title: 'GameObject를 ECS로 — Baking 완전 정복'
+tags: ['ecs', 'dots', 'baking']
 ---
 
 > GameObject와 Entity가 공존하는 방법.

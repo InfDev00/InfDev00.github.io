@@ -2,6 +2,7 @@
 date: '2026-05-22T22:52:25+09:00'
 draft: false
 title: 'Asset Postprocessor로 에셋 최적화'
+tags: ['optimization', 'asset-pipeline', 'editor-tool']
 ---
 
 > asset 자동화를 위한 기본적인 규칙

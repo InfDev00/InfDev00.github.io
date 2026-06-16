@@ -2,6 +2,7 @@
 date: '2026-05-28T01:14:31+09:00'
 draft: false
 title: 'AI로 블로그 작성 자동화하기'
+tags: ['automation', 'workflow', 'blogging']
 ---
 
 > 반복 작업을 자동화하면 창작 에너지를 아이디어에 집중할 수 있다.

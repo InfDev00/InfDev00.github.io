@@ -2,6 +2,7 @@
 date: '2026-06-15T15:20:07+09:00'
 draft: false
 title: '멀티 클라이언트 TCP 서버 구현'
+tags: ['cpp', 'tcp', 'async']
 ---
 
 > 한 번에 한 명에서 동시에 여러 명으로

@@ -2,6 +2,7 @@
 date: '2026-06-12T18:36:06+09:00'
 draft: false
 title: 'ECS 활용 — Query, Lookup, Job'
+tags: ['ecs', 'dots', 'performance']
 ---
 
 > ECS의 성능을 끌어올리는 방법

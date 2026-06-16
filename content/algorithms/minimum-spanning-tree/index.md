@@ -2,6 +2,7 @@
 date: '2026-05-23T10:22:07+09:00'
 draft: false
 title: '최소 신장 트리(MST): 크루스칼과 프림 알고리즘'
+tags: ['graph', 'greedy', 'kruskal', 'prim']
 ---
 
 > 모든 노드를 최소 비용으로 연결하는 최적의 경로 찾기.

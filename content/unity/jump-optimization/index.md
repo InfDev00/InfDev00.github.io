@@ -2,6 +2,7 @@
 date: '2026-05-31T23:39:04+09:00'
 draft: false
 title: '점프 최적화 — Coyote Time과 Jump Buffer'
+tags: ['game-mechanics', 'optimization', 'character-controller']
 ---
 
 ## 최적화가 필요한 이유

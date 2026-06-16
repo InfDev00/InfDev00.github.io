@@ -2,6 +2,7 @@
 date: '2026-06-03T11:43:45+09:00'
 draft: false
 title: 'Controller 기반 ASP.NET Core API 개발'
+tags: ['csharp', 'aspnet', 'rest-api']
 ---
 
 > Controller를 통한 API 체계화
