@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Architecture on InfDev00 DevBlog</title><link>https://infdev00.github.io/tags/architecture/</link><description>Recent content in Architecture on InfDev00 DevBlog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Sun, 24 May 2026 23:57:37 +0900</lastBuildDate><atom:link href="https://infdev00.github.io/tags/architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>ECS 개념 알아보기</title><link>https://infdev00.github.io/unity/ecs0/</link><pubDate>Sun, 24 May 2026 23:57:37 +0900</pubDate><guid>https://infdev00.github.io/unity/ecs0/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;데이터 중심으로 게임을 다시 분석하기&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="왜-ecs인가"&gt;왜 ECS인가?&lt;/h2&gt;
+&lt;p&gt;ECS는 DOTS(Data-Oriented Technology Stack) 구현 방식이며 기존 GameObject기반의 오브젝트 구조 대신 &lt;strong&gt;데이터&lt;/strong&gt; 중심으로 이뤄진 구조이다.&lt;/p&gt;
+&lt;p&gt;기존의 GameObject는 참조 타입인 &lt;code&gt;class&lt;/code&gt;이기에 데이터가 메모리에 흩어지고, &lt;strong&gt;Update&lt;/strong&gt;를 개별 호출하기 때문에 CPU 캐시를 효율적으로 사용하기 어렵다.&lt;/p&gt;
+&lt;p&gt;ECS는 이 구조를 뒤집어서 &lt;strong&gt;Entity&lt;/strong&gt;는 ID 역할만 하고 모든 데이터는 &lt;strong&gt;Component&lt;/strong&gt;에 보관된다. &lt;strong&gt;Component&lt;/strong&gt;는 값 타입인 &lt;code&gt;struct&lt;/code&gt;이기에 메모리에 정렬되어 저장되고, ECS는 이를 &lt;strong&gt;System&lt;/strong&gt;을 통해 한 번에 관리할 수 있어서 효율적이다.&lt;/p&gt;
+&lt;div class="grid"&gt;
+&lt;div class="problem-card bad"&gt;
+&lt;div class="card-tag"&gt;⚠ 기존 방식 (MonoBehaviour)&lt;/div&gt;
+&lt;h4&gt;객체 지향 — 편하지만 느리다&lt;/h4&gt;
+&lt;p&gt;&lt;ol&gt;
+&lt;li&gt;각 &lt;strong&gt;GameObject&lt;/strong&gt;는 레퍼런스만 가져 데이터가 흩어져서 배치&lt;/li&gt;
+&lt;li&gt;각 &lt;strong&gt;GameObject&lt;/strong&gt;에서 Update를 하기에 캐싱에 어려움&lt;/li&gt;
+&lt;li&gt;GC로 인한 프레임 드랍&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;</description></item></channel></rss>

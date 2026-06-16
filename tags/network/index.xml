@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Network on InfDev00 DevBlog</title><link>https://infdev00.github.io/tags/network/</link><description>Recent content in Network on InfDev00 DevBlog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Sat, 06 Jun 2026 21:46:47 +0900</lastBuildDate><atom:link href="https://infdev00.github.io/tags/network/index.xml" rel="self" type="application/rss+xml"/><item><title>C++로 TCP 서버 학습</title><link>https://infdev00.github.io/server/cpp-tcp-server/</link><pubDate>Sat, 06 Jun 2026 21:46:47 +0900</pubDate><guid>https://infdev00.github.io/server/cpp-tcp-server/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;TCP 서버 구조 학습하기&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;이전 과정에서는 asp.net을 활용해서 서버를 구축했다. 이번에는 프레임워크 없이 직접 만들어 보기로 했으며 더욱 깊게 학습하기 위해 C++ 언어를 선택했다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="tcp-서버-실행-과정"&gt;TCP 서버 실행 과정&lt;/h2&gt;
+&lt;p&gt;소켓으로 서버를 만드는 과정은 정해진 순서가 있다. 운영체제 입장에서 &amp;ldquo;이 포트로 들어오는 연결을 받겠다&amp;quot;고 선언하고, 실제 연결을 하나씩 받아 처리하는 단계로 나뉜다.&lt;/p&gt;
+&lt;p&gt;우선 서버를 켤 때 진행되는 단계를 메서드에 따라 분류하면 아래와 같다.&lt;/p&gt;
+&lt;div class="flowchart"&gt;&lt;div class="flow-box flow-color-0"&gt;socket( )&lt;/div&gt;&lt;div class="flow-arrow"&gt;→&lt;/div&gt;&lt;div class="flow-box flow-color-1"&gt;bind( )&lt;/div&gt;&lt;div class="flow-arrow"&gt;→&lt;/div&gt;&lt;div class="flow-box flow-color-2"&gt;listen( )&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;socket( )&lt;/strong&gt;&lt;br&gt;
+통신에 쓸 소켓을 만든다&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;bind( )&lt;/strong&gt;&lt;br&gt;
+소켓에 IP와 포트를 붙인다&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;listen( )&lt;/strong&gt;&lt;br&gt;
+연결 요청을 받을 수 있는 상태로 바꾼다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;서버가 켜진 이후에는 아래 흐름을 반복해서 실행한다.&lt;/p&gt;</description></item></channel></rss>

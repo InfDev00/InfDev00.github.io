@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Minimal-Api on InfDev00 DevBlog</title><link>https://infdev00.github.io/tags/minimal-api/</link><description>Recent content in Minimal-Api on InfDev00 DevBlog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Sat, 30 May 2026 16:00:42 +0900</lastBuildDate><atom:link href="https://infdev00.github.io/tags/minimal-api/index.xml" rel="self" type="application/rss+xml"/><item><title>C# 서버 입문하기 — ASP.NET Core</title><link>https://infdev00.github.io/server/csharp-server-intro/</link><pubDate>Sat, 30 May 2026 16:00:42 +0900</pubDate><guid>https://infdev00.github.io/server/csharp-server-intro/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;유니티 개발자의 C# 서버 배우기&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;Unity를 다루면서 서버에 대해 관심이 생겨 공부를 시작했다. 빠르게 입문하기 위해 우선 익숙한 C#을 사용하는 &lt;strong&gt;ASP.NET Core Minimal API&lt;/strong&gt;를 선택했고, 아래 가이드를 통해 학습했다.&lt;/p&gt;
+&lt;div class="link-card-wrapper"&gt;
+&lt;a href="https://learn.microsoft.com/ko-kr/aspnet/core/tutorials/min-web-api?view=aspnetcore-10.0" target="_blank" rel="noopener noreferrer" class="link-card-link"&gt;
+&lt;div class="link-card"&gt;
+&lt;div class="link-card-image"&gt;
+&lt;img src="https://learn.microsoft.com/en-us/media/logos/logo-ms-social.png" alt="자습서: ASP.NET Core를 사용하여 최소 API 만들기"&gt;
+&lt;/div&gt;
+&lt;div class="link-card-content"&gt;
+&lt;div class="link-card-title"&gt;자습서: ASP.NET Core를 사용하여 최소 API 만들기&lt;/div&gt;
+&lt;div class="link-card-description"&gt;Microsoft 공식 튜토리얼 — Todo CRUD API를 최소한의 코드로 만드는 과정&lt;/div&gt;
+&lt;div class="link-card-meta"&gt;
+&lt;span class="link-card-site"&gt;Microsoft Learn&lt;/span&gt;
+&lt;span class="link-card-url"&gt;https://learn.microsoft.com/ko-kr/aspnet/core/tutorials/min-web-api?view=aspnetcore-10.0&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id="minimal-api-제작하기"&gt;Minimal API 제작하기&lt;/h2&gt;
+&lt;h3 id="1-프로젝트-생성"&gt;1. 프로젝트 생성&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;dotnet new web -o TodoApi
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;dotnet add package Microsoft.EntityFrameworkCore.InMemory
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;dotnet add package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;빈 ASP.NET Core 프로젝트를 만들고, Entity Framework Core InMemory 패키지를 설치한다. 실제 DB 없이 메모리에 데이터를 저장하는 방식으로 시작한다.&lt;/p&gt;</description></item></channel></rss>

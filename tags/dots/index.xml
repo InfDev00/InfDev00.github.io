@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Dots on InfDev00 DevBlog</title><link>https://infdev00.github.io/tags/dots/</link><description>Recent content in Dots on InfDev00 DevBlog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Fri, 12 Jun 2026 18:36:06 +0900</lastBuildDate><atom:link href="https://infdev00.github.io/tags/dots/index.xml" rel="self" type="application/rss+xml"/><item><title>ECS 활용 — Query, Lookup, Job</title><link>https://infdev00.github.io/unity/ecs-advanced-usage/</link><pubDate>Fri, 12 Jun 2026 18:36:06 +0900</pubDate><guid>https://infdev00.github.io/unity/ecs-advanced-usage/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;ECS의 성능을 끌어올리는 방법&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="성능을-끌어내는-세-가지-축"&gt;성능을 끌어내는 세 가지 축&lt;/h2&gt;
+&lt;p&gt;ECS가 기존 방식과 가장 크게 다른 점은 struct 기반 구조다. 단순한 문법 차이가 아니라, 메모리 배치·캐시 효율·병렬 처리·데이터 접근 전략 전체가 이 구조에서 비롯된다. 이 글에서는 그 구조를 활용해 성능을 끌어내는 세 가지 축인 &lt;strong&gt;EntityQuery·Lookup·Job&lt;/strong&gt;을 차례로 살펴본다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="entityquery"&gt;EntityQuery&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;EntityQuery&lt;/code&gt;는 특정 Component 조합을 가진 Entity만 골라내는 방식이다. ECS에서 struct는 메모리 내부에 Chunk 단위로 연속 배치되어 있다. 따라서 각 struct를 일일이 확인하는 대신 조건에 맞지 않는 &lt;strong&gt;Chunk 전체&lt;/strong&gt;를 건너뛰어 처리 대상 자체를 줄일 수 있다.&lt;/p&gt;</description></item><item><title>GameObject를 ECS로 — Baking 완전 정복</title><link>https://infdev00.github.io/unity/ecs1/</link><pubDate>Tue, 26 May 2026 22:49:33 +0900</pubDate><guid>https://infdev00.github.io/unity/ecs1/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;GameObject와 Entity가 공존하는 방법.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="gameobject-혼용-이유"&gt;GameObject 혼용 이유&lt;/h2&gt;
+&lt;p&gt;ECS는 높은 성능을 보여주지만, &lt;strong&gt;씬 관리·UI·카메라&lt;/strong&gt; 같은 영역에서는 여전히 GameObject를 사용할 필요가 있다. 그래서 많은 프로젝트가 이동·AI·물리 계산은 ECS에서 처리하고, 외부 영역은 GameObject가 담당하는 &lt;strong&gt;ECS + GameObject 혼용&lt;/strong&gt; 방식을 택한다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="authoring을-사용하여-baking"&gt;Authoring을 사용하여 Baking&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Authoring Component&lt;/strong&gt;는 데이터를 보유하는 &lt;code&gt;MonoBehaviour&lt;/code&gt;이다. &lt;code&gt;Baker&lt;/code&gt;에서는 런타임 진입 전에 해당 Authoring을 Bake하며 &lt;strong&gt;Entity&lt;/strong&gt;를 생성한다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-csharp" data-lang="csharp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;// 데이터를 보유하는 MonoBehaviour&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;MoveAuthoring&lt;/span&gt; : MonoBehaviour
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;float&lt;/span&gt; Speed;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// Baker — Authoring 데이터를 Entity로 변환&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Baker&lt;/span&gt; : Baker&amp;lt;MoveAuthoring&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;override&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;void&lt;/span&gt; Bake(MoveAuthoring authoring)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; entity = GetEntity(TransformUsageFlags.Dynamic);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; AddComponent(entity, &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; SpeedComponent { Value = authoring.Speed });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Authoring Component를 붙인 GameObject는 반드시 &lt;strong&gt;SubScene&lt;/strong&gt; 안에 있어야 Baking이 실행된다.&lt;/p&gt;</description></item><item><title>ECS 개념 알아보기</title><link>https://infdev00.github.io/unity/ecs0/</link><pubDate>Sun, 24 May 2026 23:57:37 +0900</pubDate><guid>https://infdev00.github.io/unity/ecs0/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;데이터 중심으로 게임을 다시 분석하기&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="왜-ecs인가"&gt;왜 ECS인가?&lt;/h2&gt;
+&lt;p&gt;ECS는 DOTS(Data-Oriented Technology Stack) 구현 방식이며 기존 GameObject기반의 오브젝트 구조 대신 &lt;strong&gt;데이터&lt;/strong&gt; 중심으로 이뤄진 구조이다.&lt;/p&gt;
+&lt;p&gt;기존의 GameObject는 참조 타입인 &lt;code&gt;class&lt;/code&gt;이기에 데이터가 메모리에 흩어지고, &lt;strong&gt;Update&lt;/strong&gt;를 개별 호출하기 때문에 CPU 캐시를 효율적으로 사용하기 어렵다.&lt;/p&gt;
+&lt;p&gt;ECS는 이 구조를 뒤집어서 &lt;strong&gt;Entity&lt;/strong&gt;는 ID 역할만 하고 모든 데이터는 &lt;strong&gt;Component&lt;/strong&gt;에 보관된다. &lt;strong&gt;Component&lt;/strong&gt;는 값 타입인 &lt;code&gt;struct&lt;/code&gt;이기에 메모리에 정렬되어 저장되고, ECS는 이를 &lt;strong&gt;System&lt;/strong&gt;을 통해 한 번에 관리할 수 있어서 효율적이다.&lt;/p&gt;
+&lt;div class="grid"&gt;
+&lt;div class="problem-card bad"&gt;
+&lt;div class="card-tag"&gt;⚠ 기존 방식 (MonoBehaviour)&lt;/div&gt;
+&lt;h4&gt;객체 지향 — 편하지만 느리다&lt;/h4&gt;
+&lt;p&gt;&lt;ol&gt;
+&lt;li&gt;각 &lt;strong&gt;GameObject&lt;/strong&gt;는 레퍼런스만 가져 데이터가 흩어져서 배치&lt;/li&gt;
+&lt;li&gt;각 &lt;strong&gt;GameObject&lt;/strong&gt;에서 Update를 하기에 캐싱에 어려움&lt;/li&gt;
+&lt;li&gt;GC로 인한 프레임 드랍&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;</description></item></channel></rss>

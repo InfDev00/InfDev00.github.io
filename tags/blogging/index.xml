@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Blogging on InfDev00 DevBlog</title><link>https://infdev00.github.io/tags/blogging/</link><description>Recent content in Blogging on InfDev00 DevBlog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Thu, 28 May 2026 01:14:31 +0900</lastBuildDate><atom:link href="https://infdev00.github.io/tags/blogging/index.xml" rel="self" type="application/rss+xml"/><item><title>AI로 블로그 작성 자동화하기</title><link>https://infdev00.github.io/ai/ai-blog-automation-workflow/</link><pubDate>Thu, 28 May 2026 01:14:31 +0900</pubDate><guid>https://infdev00.github.io/ai/ai-blog-automation-workflow/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;반복 작업을 자동화하면 창작 에너지를 아이디어에 집중할 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="왜-자동화를-만들었는가"&gt;왜 자동화를 만들었는가?&lt;/h2&gt;
+&lt;p&gt;개발자로서 AI는 이제 단순히 코드를 작성하는 도구를 넘어 협업을 위한 동료처럼 사용해야 한다 생각한다. AI와 함께 진행하는 &lt;strong&gt;Workflow&lt;/strong&gt;를 만들고 운영하는 과정을 학습하고자 블로그 자동화 과정을 구상했다.&lt;/p&gt;
+&lt;p&gt;블로그 작성은 이 학습에 적합한 대상이다. 파일 생성, 검토, 배포로 이어지는 흐름이 반복되고, 각 단계의 규칙이 명확해 AI 위임 결과를 검증하기 쉽다.&lt;br&gt;
+특히 어떤 작업을 AI에게 위임할 수 있는지, 지시사항을 어떻게 구조화해야 일관된 결과가 나오는지, 사람과 AI의 역할을 어떻게 나눠야 하는지를 실제 블로그 운영을 통해 체득하고자 했다.&lt;/p&gt;</description></item></channel></rss>
