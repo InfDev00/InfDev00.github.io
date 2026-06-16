@@ -1,6 +1,6 @@
 ---
 date: '2026-06-16T15:22:30+09:00'
-draft: true
+draft: false
 title: 'LLM Wiki: 지식을 누적하는 AI'
 tags: ['llm', 'knowledge-management', 'wiki']
 ---
