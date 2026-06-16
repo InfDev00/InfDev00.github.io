@@ -1,6 +1,20 @@
 :root {
     --main-width: 900px;
+    /* 헤더 너비를 사이드바(250px) 포함 콘텐츠 영역과 일치시킴 */
+    --nav-width: calc(var(--main-width) + 250px);
 }
+
+/* 헤더 로고 - --main-width에 비례해 자동 조정 */
+.logo a {
+    font-size: calc(var(--main-width) * 0.032);
+}
+
+/* 다크모드 토글 아이콘 크기를 로고에 비례해 맞춤 */
+.theme-toggle svg {
+    width: calc(var(--main-width) * 0.024);
+    height: calc(var(--main-width) * 0.024);
+}
+
 
 @media screen and (min-width: 768px) {
     .container-with-sidebar {
