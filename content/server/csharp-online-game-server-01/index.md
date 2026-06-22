@@ -104,8 +104,6 @@ TCP는 스트림 프로토콜이다. 보낸 두 메시지가 한 번에 도착�
 
 수신 측은 먼저 헤더 2바이트를 채운 뒤, 헤더에서 읽은 크기만큼 본문을 쌓아 한 패킷으로 처리한다. 만일 크기를 채우지 못할 경우, 본문을 누적해서 다음 수신 시에 사용한다.
 
-이 상태를 콜백을 넘나들며 유지하는 것이 `CMessageResolver`다.
-
 ```csharp
 class CMessageResolver {
     const int HEADERSIZE = 2;
