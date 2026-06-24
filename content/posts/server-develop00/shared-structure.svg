@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="450" viewBox="0 0 700 450">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto">
+      <polygon points="0 0, 8 3.5, 0 7" fill="#6B7280"/>
+    </marker>
+    <marker id="arr-g" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto">
+      <polygon points="0 0, 8 3.5, 0 7" fill="#10B981"/>
+    </marker>
+    <marker id="arr-a" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto">
+      <polygon points="0 0, 8 3.5, 0 7" fill="#F59E0B"/>
+    </marker>
+    <marker id="arr-gr" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto">
+      <polygon points="0 0, 8 3.5, 0 7" fill="#9CA3AF"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="700" height="450" fill="#F8FAFC" rx="10"/>
+
+  <!-- =================== net/ section =================== -->
+  <rect x="10" y="10" width="220" height="430" fill="#EFF6FF" rx="8" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="24" y="32" font-family="ui-monospace,monospace" font-size="12" font-weight="700" fill="#3B82F6">net/</text>
+
+  <!-- NetworkService -->
+  <rect x="25" y="42" width="190" height="50" fill="white" rx="6" stroke="#3B82F6" stroke-width="2"/>
+  <text x="120" y="63" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="13" font-weight="700" fill="#1E40AF">NetworkService</text>
+  <text x="120" y="82" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="9" fill="#93C5FD">초기화 · Listen · Connect</text>
+
+  <!-- NS → Listener & Connect -->
+  <line x1="80" y1="92" x2="65" y2="122" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="160" y1="92" x2="173" y2="122" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Listener -->
+  <rect x="25" y="122" width="85" height="40" fill="white" rx="5" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="67" y="140" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="12" font-weight="600" fill="#1E40AF">Listener</text>
+  <text x="67" y="155" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="9" fill="#93C5FD">AcceptAsync</text>
+
+  <!-- Connect -->
+  <rect x="130" y="122" width="80" height="40" fill="white" rx="5" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="170" y="140" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="12" font-weight="600" fill="#1E40AF">Connect</text>
+  <text x="170" y="155" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="9" fill="#93C5FD">ConnectAsync</text>
+
+  <!-- Listener + Connect → Session (merge at y=190) -->
+  <polyline points="67,162 67,190 120,190 120,207" stroke="#6B7280" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  <polyline points="170,162 170,190 122,190" stroke="#6B7280" stroke-width="1.5" fill="none"/>
+  <text x="120" y="184" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="8" fill="#9CA3AF">OnSessionCreated</text>
+
+  <!-- Session -->
+  <rect x="35" y="207" width="170" height="50" fill="white" rx="6" stroke="#3B82F6" stroke-width="2"/>
+  <text x="120" y="229" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="13" font-weight="700" fill="#1E40AF">Session</text>
+  <text x="120" y="247" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="9" fill="#93C5FD">연결당 1개 · 송수신 큐</text>
+
+  <!-- Session → IPeer -->
+  <line x1="120" y1="257" x2="120" y2="315" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="130" y="291" font-family="ui-sans-serif,sans-serif" font-size="8" fill="#9CA3AF">Peer 바인딩</text>
+
+  <!-- IPeer (dashed = interface) -->
+  <rect x="35" y="315" width="170" height="50" fill="white" rx="6" stroke="#3B82F6" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="120" y="337" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="13" font-weight="700" fill="#1E40AF">IPeer</text>
+  <text x="120" y="354" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="9" fill="#93C5FD">«interface» · OnMessage · Send</text>
+
+  <!-- =================== common/ section =================== -->
+  <rect x="245" y="10" width="198" height="205" fill="#F0FDF4" rx="8" stroke="#6EE7B7" stroke-width="1.5"/>
+  <text x="258" y="32" font-family="ui-monospace,monospace" font-size="12" font-weight="700" fill="#10B981">common/</text>
+
+  <rect x="258" y="42" width="172" height="38" fill="white" rx="5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="344" y="57" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="11" font-weight="600" fill="#065F46">BufferManager</text>
+  <text x="344" y="72" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="9" fill="#6EE7B7">수신 버퍼 슬라이스 할당</text>
+
+  <rect x="258" y="88" width="172" height="38" fill="white" rx="5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="344" y="103" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="11" font-weight="600" fill="#065F46">MessageResolver</text>
+  <text x="344" y="118" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="9" fill="#6EE7B7">TCP 경계 복원 (2B 헤더)</text>
+
+  <rect x="258" y="134" width="172" height="38" fill="white" rx="5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="344" y="149" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="11" font-weight="600" fill="#065F46">SAEAPool</text>
+  <text x="344" y="164" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="9" fill="#6EE7B7">SAEA 객체 재사용 풀</text>
+
+  <rect x="258" y="180" width="172" height="26" fill="white" rx="5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="344" y="197" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="11" font-weight="600" fill="#065F46">SharedHelper (Socket 확장)</text>
+
+  <!-- =================== packet/ section =================== -->
+  <rect x="245" y="228" width="445" height="212" fill="#FFFBEB" rx="8" stroke="#FDE68A" stroke-width="1.5"/>
+  <text x="258" y="250" font-family="ui-monospace,monospace" font-size="12" font-weight="700" fill="#F59E0B">packet/</text>
+
+  <!-- Packet abstract -->
+  <rect x="290" y="260" width="180" height="50" fill="white" rx="6" stroke="#F59E0B" stroke-width="2"/>
+  <text x="380" y="281" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="13" font-weight="700" fill="#92400E">Packet</text>
+  <text x="380" y="299" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="9" fill="#FCD34D">«abstract» · Create · Parse · Handle</text>
+
+  <!-- LoginReqPacket -->
+  <rect x="258" y="355" width="145" height="42" fill="white" rx="5" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="330" y="373" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="11" font-weight="600" fill="#92400E">LoginReqPacket</text>
+  <text x="330" y="388" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="9" fill="#FCD34D">OnRead · OnWrite · Handle</text>
+
+  <!-- LoginAckPacket -->
+  <rect x="415" y="355" width="145" height="42" fill="white" rx="5" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="487" y="373" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="11" font-weight="600" fill="#92400E">LoginAckPacket</text>
+  <text x="487" y="388" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="9" fill="#FCD34D">OnRead · OnWrite · Handle</text>
+
+  <!-- Inheritance arrows (subclass → Packet) -->
+  <polyline points="330,355 330,328 370,310" stroke="#F59E0B" stroke-width="1.5" fill="none" marker-end="url(#arr-a)"/>
+  <polyline points="487,355 487,328 470,310" stroke="#F59E0B" stroke-width="1.5" fill="none" marker-end="url(#arr-a)"/>
+
+  <!-- =================== Cross-section arrows (drawn last) =================== -->
+
+  <!-- Session → common/ -->
+  <polyline points="205,232 230,232 230,107 245,107"
+    stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,2" fill="none" marker-end="url(#arr-g)"/>
+  <text x="219" y="226" text-anchor="middle" font-family="ui-sans-serif,sans-serif" font-size="9" fill="#10B981">uses</text>
+
+  <!-- IPeer → Packet -->
+  <polyline points="205,340 238,340 238,287 290,287"
+    stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="5,2" fill="none" marker-end="url(#arr-gr)"/>
+  <text x="249" y="313" font-family="ui-sans-serif,sans-serif" font-size="8" fill="#9CA3AF">OnMessage</text>
+  <text x="249" y="323" font-family="ui-sans-serif,sans-serif" font-size="8" fill="#9CA3AF">(Packet)</text>
+</svg>
