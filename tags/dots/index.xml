@@ -36,12 +36,19 @@
 &lt;p&gt;기존의 GameObject는 참조 타입인 &lt;code&gt;class&lt;/code&gt;이기에 데이터가 메모리에 흩어지고, &lt;strong&gt;Update&lt;/strong&gt;를 개별 호출하기 때문에 CPU 캐시를 효율적으로 사용하기 어렵다.&lt;/p&gt;
 &lt;p&gt;ECS는 이 구조를 뒤집어서 &lt;strong&gt;Entity&lt;/strong&gt;는 ID 역할만 하고 모든 데이터는 &lt;strong&gt;Component&lt;/strong&gt;에 보관된다. &lt;strong&gt;Component&lt;/strong&gt;는 값 타입인 &lt;code&gt;struct&lt;/code&gt;이기에 메모리에 정렬되어 저장되고, ECS는 이를 &lt;strong&gt;System&lt;/strong&gt;을 통해 한 번에 관리할 수 있어서 효율적이다.&lt;/p&gt;
 &lt;div class="grid"&gt;
-&lt;div class="problem-card bad"&gt;
-&lt;div class="card-tag"&gt;⚠ 기존 방식 (MonoBehaviour)&lt;/div&gt;
-&lt;h4&gt;객체 지향 — 편하지만 느리다&lt;/h4&gt;
-&lt;p&gt;&lt;ol&gt;
+&lt;div class="card card-red"&gt;&lt;div class="card-body"&gt;&lt;div class="card-tag"&gt;⚠ 기존 방식 (MonoBehaviour)&lt;/div&gt;&lt;div class="card-title"&gt;객체 지향 — 편하지만 느리다&lt;/div&gt;&lt;div class="card-content"&gt;&lt;ol&gt;
 &lt;li&gt;각 &lt;strong&gt;GameObject&lt;/strong&gt;는 레퍼런스만 가져 데이터가 흩어져서 배치&lt;/li&gt;
 &lt;li&gt;각 &lt;strong&gt;GameObject&lt;/strong&gt;에서 Update를 하기에 캐싱에 어려움&lt;/li&gt;
 &lt;li&gt;GC로 인한 프레임 드랍&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/p&gt;</description></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card card-green"&gt;&lt;div class="card-body"&gt;&lt;div class="card-tag"&gt;✓ ECS 방식&lt;/div&gt;&lt;div class="card-title"&gt;데이터 지향 — 어렵지만 빠르다&lt;/div&gt;&lt;div class="card-content"&gt;&lt;ol&gt;
+&lt;li&gt;같은 종류의 데이터를 메모리에 연속 배치&lt;/li&gt;
+&lt;li&gt;CPU 순차적 탐색을 통한 효율성&lt;/li&gt;
+&lt;li&gt;Burst 및 Job을 통한 멀티 프로세싱&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;이 외에도 같은 Component 조합을 사용하는 &lt;code&gt;Entity&lt;/code&gt;끼리 묶는 Archetype을 사용하고 고정된 크기의 Chunk를 통하여 더욱 최적화한다.&lt;/p&gt;</description></item></channel></rss>
