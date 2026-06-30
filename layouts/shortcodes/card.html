@@ -1,0 +1,34 @@
+{{- $color := .Get "color" | default "" -}}
+{{- $title := .Get "title" -}}
+{{- $tag := .Get "tag" -}}
+{{- $icon := .Get "icon" -}}
+{{- $layout := .Get "layout" | default "plain" -}}
+
+<div class="card{{ if $color }} card-{{ $color }}{{ end }}{{ if $icon }} card-horizontal{{ end }}">
+  {{- if $icon -}}
+  <div class="card-icon">
+    <img src="{{ $icon }}" alt="{{ $title }}">
+  </div>
+  {{- end -}}
+  <div class="card-body">
+    {{- if $tag -}}<div class="card-tag">{{ $tag }}</div>{{- end -}}
+    {{- if $title -}}<div class="card-title">{{ $title }}</div>{{- end -}}
+    {{- if eq $layout "fields" -}}
+      <table class="card-fields">
+        <tbody>
+          {{- range split (.Inner | strings.TrimSpace) "\n" -}}
+            {{- $parts := split (strings.TrimSpace .) "|" -}}
+            {{- if ge (len $parts) 2 -}}
+            <tr>
+              <td class="field-name">{{ index $parts 0 | strings.TrimSpace }}</td>
+              <td class="field-type">{{ index $parts 1 | strings.TrimSpace }}</td>
+            </tr>
+            {{- end -}}
+          {{- end -}}
+        </tbody>
+      </table>
+    {{- else if .Inner -}}
+      <div class="card-content">{{ .Inner | markdownify }}</div>
+    {{- end -}}
+  </div>
+</div>

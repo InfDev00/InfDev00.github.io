@@ -49,8 +49,8 @@ source를 넣고 처리를 요청하면 해당 파일을 읽고 요약한 내용
 ## 구현 방법
 
 <div class="grid">
-{{< tool-card image="claude-code.png" title="Claude Code" description="AI 코딩 어시스턴트" >}}
-{{< tool-card image="obsidian.png" title="Obsidian" description="로컬 마크다운 기반 노트 앱" >}}
+{{< card icon="claude-code.png" title="Claude Code" >}}AI 코딩 어시스턴트{{< /card >}}
+{{< card icon="obsidian.png" title="Obsidian" >}}로컬 마크다운 기반 노트 앱{{< /card >}}
 </div>
 
 **Claude Code**와 **Obsidian**을 조합해서 구현했다. 우선 Obsidian에서 새로운 Vault를 생성하고, 해당 루트 폴더를 대상으로 Claude Code를 실행한다. Karpathy의 `llm-wiki.md` 파일과 함께 아래 3단계 계획을 제공한다.

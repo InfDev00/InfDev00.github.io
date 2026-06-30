@@ -217,12 +217,12 @@ app.UseStaticFiles();
 앞서 CRUD 코드에서 `TodoDb`를 `new`로 생성한 곳은 없다. `builder.Services.AddDbContext<TodoDb>(...)` 로 등록해뒀기 때문에, 핸들러가 `TodoDb db` 매개변수를 선언하면 ASP.NET Core가 자동으로 찾아서 넣어준다.
 
 <div class="grid">
-{{< problem-card type="bad" tag="new 방식" title="직접 생성해서 쓰기" >}}
+{{< card color="red" tag="new 방식" title="직접 생성해서 쓰기" >}}
 → 쓰는 쪽이 의존 대상을 직접 관리
-{{< /problem-card >}}
-{{< problem-card type="good" tag="DI 방식" title="등록해두면 알아서 들어온다" >}}
+{{< /card >}}
+{{< card color="green" tag="DI 방식" title="등록해두면 알아서 들어온다" >}}
 → 프레임워크가 찾아서 주입
-{{< /problem-card >}}
+{{< /card >}}
 </div>
 
 의존 대상이 많아질수록 후자가 훨씬 깔끔해진다.

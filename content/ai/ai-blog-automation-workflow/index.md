@@ -62,17 +62,17 @@ Claude Code의 **Skills**는 `.claude/commands/` 디렉터리에 마크다운 �
 검토 기준(사실 오류, 중복, 주제 이탈, 내용 충돌 등)은 `review.md` 스킬에 직접 내장되어 있다.
 
 <div class="grid">
-{{< problem-card type="bad" tag="⚠ 규칙만 정의하면" title="초안이 매번 같다" >}}
+{{< card color="red" tag="⚠ 규칙만 정의하면" title="초안이 매번 같다" >}}
 구조 규칙만 있으면 AI는 항상 같은 틀에서 초안을 만든다.
 
 사용자가 매번 같은 내용을 추가하거나 지우더라도 다음 초안에 반영되지 않는다.
-{{< /problem-card >}}
+{{< /card >}}
 
-{{< problem-card type="good" tag="✓ 내용 패턴도 학습하면" title="초안이 점점 가까워진다" >}}
+{{< card color="green" tag="✓ 내용 패턴도 학습하면" title="초안이 점점 가까워진다" >}}
 `writing-voice.md`가 배포마다 갱신되며 사용자 편집 패턴을 누적한다.
 
 다음 초안부터 불필요한 내용은 처음부터 빠지고, 자주 추가하던 내용이 먼저 포함된다.
-{{< /problem-card >}}
+{{< /card >}}
 </div>
 
 ---

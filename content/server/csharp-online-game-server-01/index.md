@@ -37,9 +37,9 @@ AcceptAsync(saea) 호출
 해당 서적에서는 서버 모듈 구조를 크게 아래 세 가지 파트로 구성한다.
 
 <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
-{{< tool-card title="CNetworkService" description="전체 네트워크 허브. 클라이언트 접근 관리" >}}
-{{< tool-card title="CListener" description="해당 소켓에 bind -> listen -> accept 할당" >}}
-{{< tool-card title="CUserToken" description="접속한 클라이언트에 대응" >}}
+{{< card title="CNetworkService" >}}전체 네트워크 허브. 클라이언트 접근 관리{{< /card >}}
+{{< card title="CListener" >}}해당 소켓에 bind -> listen -> accept 할당{{< /card >}}
+{{< card title="CUserToken" >}}접속한 클라이언트에 대응{{< /card >}}
 </div>
 
 

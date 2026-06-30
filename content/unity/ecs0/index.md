@@ -16,17 +16,17 @@ ECS는 DOTS(Data-Oriented Technology Stack) 구현 방식이며 기존 GameObjec
 ECS는 이 구조를 뒤집어서 **Entity**는 ID 역할만 하고 모든 데이터는 **Component**에 보관된다. **Component**는 값 타입인 `struct`이기에 메모리에 정렬되어 저장되고, ECS는 이를 **System**을 통해 한 번에 관리할 수 있어서 효율적이다.
 
 <div class="grid">
-{{< problem-card type="bad" tag="⚠ 기존 방식 (MonoBehaviour)" title="객체 지향 — 편하지만 느리다" >}}
+{{< card color="red" tag="⚠ 기존 방식 (MonoBehaviour)" title="객체 지향 — 편하지만 느리다" >}}
 1. 각 **GameObject**는 레퍼런스만 가져 데이터가 흩어져서 배치
 2. 각 **GameObject**에서 Update를 하기에 캐싱에 어려움
 3. GC로 인한 프레임 드랍
-{{< /problem-card >}}
+{{< /card >}}
 
-{{< problem-card type="good" tag="✓ ECS 방식" title="데이터 지향 — 어렵지만 빠르다" >}}
+{{< card color="green" tag="✓ ECS 방식" title="데이터 지향 — 어렵지만 빠르다" >}}
 1. 같은 종류의 데이터를 메모리에 연속 배치
 2. CPU 순차적 탐색을 통한 효율성
 3. Burst 및 Job을 통한 멀티 프로세싱
-{{< /problem-card >}}
+{{< /card >}}
 </div>
 
 이 외에도 같은 Component 조합을 사용하는 `Entity`끼리 묶는 Archetype을 사용하고 고정된 크기의 Chunk를 통하여 더욱 최적화한다.

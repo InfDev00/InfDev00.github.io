@@ -34,10 +34,8 @@ Minimal API는 위 코드처럼 `Program.cs` 파일 안에 라우트를 Inline R
 Controller 방식은 라우트 처리 로직을 별도 Controller 클래스 파일로 분리하고, 어트리뷰트로 라우트를 선언하는 구조다.
 
 <div class="grid">
-{{< problem-card type="bad" tag="Minimal API" title="Program.cs에 모두 정의" >}}
-{{< /problem-card >}}
-{{< problem-card type="good" tag="Controller" title="Controller로 분리된 구조" >}}
-{{< /problem-card >}}
+{{< card color="red" tag="Minimal API" title="Program.cs에 모두 정의" >}}{{< /card >}}
+{{< card color="green" tag="Controller" title="Controller로 분리된 구조" >}}{{< /card >}}
 </div>
 
 기능 자체가 달라지는 건 아니다. 다만 규모가 커질수록 Controller 방식이 유지보수에 유리하다. Minimal API처럼 `Program.cs`에 라우팅을 포함시키는 방식은 엔드포인트가 늘어날수록 한 파일이 비대해져 전체 구조를 파악하기 어려워진다.  

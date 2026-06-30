@@ -9,9 +9,9 @@ title: '서버 프로젝트 기록 (1)'
 ## 폴더 구성
 
 <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
-{{< tool-card title="Shared" description="공용 코드 구현부. Packet 등 쌍방에서 모두 사용하는 코드" >}}
-{{< tool-card title="Server" description="서버 측에서만 사용하는 코드. 게임 세부 로직" >}}
-{{< tool-card title="Client" description="클라이언트 코드. 서버에 요청하여 통신" >}}
+{{< card title="Shared" >}}공용 코드 구현부. Packet 등 쌍방에서 모두 사용하는 코드{{< /card >}}
+{{< card title="Server" >}}서버 측에서만 사용하는 코드. 게임 세부 로직{{< /card >}}
+{{< card title="Client" >}}클라이언트 코드. 서버에 요청하여 통신{{< /card >}}
 </div>
 
 주요 코드는 세 부분으로 나눴다. 공용으로 사용되는 코드는 `Shared`로 분리하여 `Server`에서는 직접, `Client`에서는 dll을 통해 접근하도록 처리했다.
