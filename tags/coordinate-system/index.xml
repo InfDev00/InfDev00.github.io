@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Coordinate-System on InfDev00 DevBlog</title><link>https://infdev00.github.io/tags/coordinate-system/</link><description>Recent content in Coordinate-System on InfDev00 DevBlog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Thu, 02 Jul 2026 13:15:59 +0900</lastBuildDate><atom:link href="https://infdev00.github.io/tags/coordinate-system/index.xml" rel="self" type="application/rss+xml"/><item><title>좌표계 변환하기: 직교, 원통, 구면</title><link>https://infdev00.github.io/unity/coordinate-system-conversion/</link><pubDate>Thu, 02 Jul 2026 13:15:59 +0900</pubDate><guid>https://infdev00.github.io/unity/coordinate-system-conversion/</guid><description>&lt;p&gt;게임에서 위성처럼 대상을 따라 순회하거나, 주위를 회전하도록 구현해야 하는 상황이 있다. 이때 단순히 &lt;code&gt;x,y,z&lt;/code&gt; 값을 직접 계산하면 비직관적이다. 회전은 &lt;strong&gt;거리&lt;/strong&gt;와 &lt;strong&gt;각도&lt;/strong&gt; 두 값으로 표현되는데 매번 좌표로 환산해야 하기 때문이다.&lt;/p&gt;
+&lt;p&gt;이런 상황에선 일반적으로 사용하는 직교좌표계 대신 원통좌표계, 구면좌표계를 사용할 수 있다. 각 좌표계는 설명하는 방식이 다르지만 같은 점을 가리키는 표현 방식이다. 그래서 서로 변환할 수 있고, 상황에 맞는 좌표계를 골라 쓰면 계산이 단순하고 코드가 직관적으로 변한다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="좌표계의-종류"&gt;좌표계의 종류&lt;/h2&gt;
+&lt;div class="grid" style="grid-template-columns: repeat(3, 1fr);"&gt;
+&lt;div class="card card-blue"&gt;&lt;div class="card-body"&gt;&lt;div class="card-title"&gt;직교 좌표계&lt;/div&gt;&lt;div class="card-content"&gt;(x, y, z)&lt;br&gt;
+일반적인 x,y,z 좌표계&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card card-teal"&gt;&lt;div class="card-body"&gt;&lt;div class="card-title"&gt;원통 좌표계&lt;/div&gt;&lt;div class="card-content"&gt;(ρ, θ, z)&lt;br&gt;
+xy 평면 위에 반지름 ρ, 각도 θ와 직교 좌표계의 z를 높이로 사용&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card card-teal"&gt;&lt;div class="card-body"&gt;&lt;div class="card-title"&gt;구면 좌표계&lt;/div&gt;&lt;div class="card-content"&gt;(ρ, θ, φ)&lt;br&gt;
+반지름 ρ와 두 각도 θ, φ로 표현&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;우리가 일반적으로 사용하는 좌표계는 직교 좌표계이다. 이 직교 좌표계에서 Δθ만큼 회전한다고 해 보자.&lt;/p&gt;</description></item></channel></rss>
