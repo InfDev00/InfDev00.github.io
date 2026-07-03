@@ -18,7 +18,7 @@ tags: ['math', 'coordinate-system', 'unity']
 일반적인 x,y,z 좌표계 {{< /card >}}
 {{< card color="teal" title="원통 좌표계" >}} (ρ, θ, z)  
 xy 평면 위에 반지름 ρ, 각도 θ와 직교 좌표계의 z를 높이로 사용  {{< /card >}}
-{{< card color="teal" title="구면 좌표계" >}} (ρ, θ, φ)  
+{{< card color="purple" title="구면 좌표계" >}} (ρ, θ, φ)  
 반지름 ρ와 두 각도 θ, φ로 표현 {{< /card >}}
 </div>
 

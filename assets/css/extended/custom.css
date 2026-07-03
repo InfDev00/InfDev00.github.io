@@ -227,6 +227,7 @@
 .card-green::before { background: #98c379; }
 .card-blue::before  { background: #61afef; }
 .card-teal::before  { background: #56b6c2; }
+.card-purple::before { background: #c678dd; }
 
 .card-tag {
     font-size: 0.8em;
@@ -238,6 +239,7 @@
 .card-green .card-tag { color: #98c379; }
 .card-blue  .card-tag { color: #61afef; }
 .card-teal  .card-tag { color: #56b6c2; }
+.card-purple .card-tag { color: #c678dd; }
 
 .card-title {
     font-size: 1.05rem;
@@ -304,6 +306,36 @@
 
 @media screen and (max-width: 767px) {
     .grid { grid-template-columns: 1fr; }
+}
+
+/* ── columns: 노션 스타일 다단 배치(2~3열, 표·글 등 임의 콘텐츠) ── */
+.columns {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.columns > div {
+    flex: 1 1 0%;
+    min-width: 0;
+}
+
+/* width가 명시된 열은 그 값을 고정 폭으로, 나머지 열이 남는 공간을 나눠 가진다 */
+.columns > div[style] {
+    flex: 0 0 auto;
+}
+
+.columns > div > table {
+    margin: 0;
+}
+
+.columns > div > p:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .columns { flex-direction: column; }
 }
 
 /* ── flowchart shortcode ── */
