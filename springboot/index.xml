@@ -1,1 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Springboots on InfDev00 DevBlog</title><link>https://infdev00.github.io/springboot/</link><description>Recent content in Springboots on InfDev00 DevBlog</description><generator>Hugo</generator><language>ko-kr</language><atom:link href="https://infdev00.github.io/springboot/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Springboots on InfDev00 DevBlog</title><link>https://infdev00.github.io/springboot/</link><description>Recent content in Springboots on InfDev00 DevBlog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Tue, 21 Jul 2026 16:18:49 +0900</lastBuildDate><atom:link href="https://infdev00.github.io/springboot/index.xml" rel="self" type="application/rss+xml"/><item><title>스프링 부트 시작하기 : 컨트롤러와 롬복</title><link>https://infdev00.github.io/springboot/spring-boot-controller-lombok/</link><pubDate>Tue, 21 Jul 2026 16:18:49 +0900</pubDate><guid>https://infdev00.github.io/springboot/spring-boot-controller-lombok/</guid><description>&lt;p&gt;백엔드 개발을 공부하고 싶어서 스프링 부트를 시작해 보고자 한다. 우선 익숙한 언어인 자바를 활용한 웹 프레임워크라는 점, 그리고 보편적으로 활용하고 있는 프레임워크라는 점에서 선택했다.&lt;/p&gt;
+&lt;div class="link-card-wrapper"&gt;
+&lt;a href="https://product.kyobobook.co.kr/detail/S000211685975" target="_blank" rel="noopener noreferrer" class="link-card-link"&gt;
+&lt;div class="link-card"&gt;
+&lt;div class="link-card-image"&gt;
+&lt;img src="https://contents.kyobobook.co.kr/sih/fit-in/400x0/pdt/9791163035398.jpg" alt="Do it! 점프 투 스프링 부트 3"&gt;
+&lt;/div&gt;
+&lt;div class="link-card-content"&gt;
+&lt;div class="link-card-title"&gt;Do it! 점프 투 스프링 부트 3&lt;/div&gt;
+&lt;div class="link-card-description"&gt;박응용 저 · 이지스퍼블리싱 — 백엔드 개발에 필요한 스프링 부트의 핵심만 담았다&lt;/div&gt;
+&lt;div class="link-card-meta"&gt;
+&lt;span class="link-card-site"&gt;교보문고&lt;/span&gt;
+&lt;span class="link-card-url"&gt;https://product.kyobobook.co.kr/detail/S000211685975&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;위 책을 통해서 학습을 진행했다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="웹-서비스와-컨트롤러"&gt;웹 서비스와 컨트롤러&lt;/h2&gt;
+&lt;p&gt;웹 서비스는 기본적으로 클라이언트에서 요청을 보내고, 서버에서 응답하는 구조로 이뤄진다. 요청을 보낼 때는 서버의 주소인 IP 주소, 혹은 서버 주소를 대체할 도메인 명을 알아야 한다. 해당 요소를 통해 호출하면 해당되는 웹 서버가 호출되고 서버에선 적절한 응답을 클라이언트에게 돌려주는 방식이다.&lt;/p&gt;</description></item></channel></rss>
