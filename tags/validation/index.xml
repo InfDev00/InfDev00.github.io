@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Validation on InfDev00 DevBlog</title><link>https://infdev00.github.io/tags/validation/</link><description>Recent content in Validation on InfDev00 DevBlog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Thu, 23 Jul 2026 12:50:14 +0900</lastBuildDate><atom:link href="https://infdev00.github.io/tags/validation/index.xml" rel="self" type="application/rss+xml"/><item><title>서비스 계층, DTO와 Form</title><link>https://infdev00.github.io/springboot/spring-boot-service-dto-form/</link><pubDate>Thu, 23 Jul 2026 12:50:14 +0900</pubDate><guid>https://infdev00.github.io/springboot/spring-boot-service-dto-form/</guid><description>&lt;p&gt;&lt;a href="../spring-boot-jpa-entity/"&gt;이전 포스트&lt;/a&gt;에서 엔티티를 다뤘다. 이번 편에서는 데이터베이스를 활용하는 서비스 계층과 실제 웹 서비스를 제공하는 방법을 정리한다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="서비스-계층과-dto"&gt;서비스 계층과 DTO&lt;/h2&gt;
+&lt;p&gt;데이터를 보다 효율적으로 다루기 위해서 컨트롤러는 Repository를 직접 호출하는 대신 &lt;strong&gt;서비스&lt;/strong&gt; 계층을 거쳐서 접근한다.&lt;/p&gt;
+&lt;div class="grid"&gt;
+&lt;div class="card card-green"&gt;&lt;div class="card-body"&gt;&lt;div class="card-title"&gt;복잡한 코드 모듈화&lt;/div&gt;&lt;div class="card-content"&gt;&lt;p&gt;여러 개의 컨트롤러가 특정 Repository에 직접 접근한다면, 각 컨트롤러는 해당 Repository를 처리하는 코드를 중복해서 구현해야 한다.&lt;/p&gt;
+&lt;p&gt;서비스에서 해당 구현을 대신함으로써 모듈화가 가능하다.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card card-blue"&gt;&lt;div class="card-body"&gt;&lt;div class="card-title"&gt;엔티티 객체를 DTO 객체로 변환&lt;/div&gt;&lt;div class="card-content"&gt;&lt;p&gt;엔티티 클래스는 데이터베이스와 직결된 클래스이므로 직접 사용 시 민감한 데이터가 노출될 수 있다.&lt;/p&gt;</description></item></channel></rss>
